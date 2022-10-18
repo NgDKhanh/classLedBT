@@ -4,21 +4,20 @@
  * 
  */
 
-void CaiDatManHinh();
-void KhoiTaoHienThi();
-void DieuKhienLCD();
-void HienThiMenu1();
-void HienThiMenu2();
+void LCD_CaiDat();
+void LCD_KhoiTao();
+void LCD_DieuKhien();
+void LCD_Menu1();
+void LCD_Menu2();
 
-
-void CaiDatLCD()
+void LCD_CaiDat()
 {
   lcd.begin();
   lcd.backlight();
   lcd.display();
 }
 
-void KhoiTaoHienThi()
+void LCD_KhoiTao()
 {
   lcd.setCursor(0, 0);
   lcd.print("SPARC LAB 2");
@@ -26,7 +25,7 @@ void KhoiTaoHienThi()
   lcd.print("hardware team");
 }
 
-void DieuKhienLCD()
+void LCD_DieuKhien()
 {
   switch(trangThai)
   {
@@ -45,7 +44,7 @@ void DieuKhienLCD()
   }
 }
 
-void HienThiMenu1()
+void LCD_Menu1()
 {
 /*
                   ---------------------------------
@@ -60,7 +59,7 @@ void HienThiMenu1()
   lcd.print("do am    : ");
   lcd.print(docDoAm());
 }
-void HienThiMenu2()
+void LCD_Menu2()
 {
 /*
                   ---------------------------------
