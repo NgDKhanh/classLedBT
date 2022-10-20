@@ -10,13 +10,20 @@ void LCD_DieuKhien();
 void LCD_Menu1();
 void LCD_Menu2();
 
+/**
+ * @brief Cai dat man hinh LCD
+ * 
+ */
 void LCD_CaiDat()
 {
   lcd.begin();
   lcd.backlight();
   lcd.display();
 }
-
+/**
+ * @brief Khoi tao man hinh, in ra dong 1: SPARC LAB 2, dong 2: hardware team
+ * 
+ */
 void LCD_KhoiTao()
 {
   lcd.setCursor(0, 0);
@@ -24,7 +31,10 @@ void LCD_KhoiTao()
   lcd.setCursor(0, 1);
   lcd.print("hardware team");
 }
-
+/**
+ * @brief dieu khien man hinh dua vao TRANG_THAI_DEN
+ * 
+ */
 void LCD_DieuKhien()
 {
   switch(trangThai)
@@ -43,7 +53,10 @@ void LCD_DieuKhien()
         
   }
 }
-
+/**
+ * @brief hien thi menu 1: nhiet do, do am
+ * 
+ */
 void LCD_Menu1()
 {
 /*
@@ -59,6 +72,10 @@ void LCD_Menu1()
   lcd.print("do am    : ");
   lcd.print(docDoAm());
 }
+/**
+ * @brief hien thi menu 2: trang thai den gom 3 mau: r, g, b
+ * 
+ */
 void LCD_Menu2()
 {
 /*
